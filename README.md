@@ -31,21 +31,10 @@ cargo build --release
 ```
 
 ## Example Usage
-
-Create a settings file in a `configuration` directory in the same directory you run the code.
-
-// settings.json
-```json
-{
-  "network": "https://api.mainnet-beta.solana.com",
-  "mint_accounts": ["6RB1jyer1XKJJ6X3RdmoXLV1ixdojXLjsSCsFBPLWsam"]
-}
-```
-
 Run the program:
 
 ```
-./metaplex_decoder
+./metaplex_decoder <mint_account> <network>
 ```
 
-This will loop over all the specified mint accounts and create a metadata file with all the fields from the Rust `Data` struct. 
+This will yield the metadata as single line JSON to stdout.
